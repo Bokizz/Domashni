@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8 ">
+    <title>DOMASHNA2</title>
+    <style type = "text/css">
+       .background_image { 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1; }
+    </style>
+        <link rel = "stylesheet" type = "text/css" 
+        href = "style.css"> <!--3,4-->
+        <link rel = "stylesheet", type="text/css"
+        href="ul.css"> <!--5-->
+
+</head>
+<body bgcolor="black">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">Countries ⮟</a>
+        <ul class = "dropdown">
+            <li><a href="#">Macedonia</a></li>
+            <li><a href="#">Turkey</a></li>
+            <li><a href="#">Albania</a></li>
+            <li><a href="#">Germany</a></li>
+            <li><a href="#">United States of America</a></li>
+        </ul>
+        </li>
+        <li><a href="#">About Us</a></li>
+        <li>
+            <a href="#">Contact Us</a>
+            <ul class = "dropdown">
+                <li><a href="#">075500000</a></li>
+            </ul>
+        </li>
+    </ul>
+    <table style = " background-color: rgb(0, 0, 0); width: 300px; height: 300px;margin: auto ;border: 50px;border-color: rgb(248, 1, 51);"> <!--skoro 1-->
+        <tr>
+            <th colspan="2" bgcolor="red"> Döner KING </th>
+        </tr>
+        <tbody>
+            <tr>
+                <td bgcolor="red"><strong>NAME</strong></td>
+                <td bgcolor="red">
+                    <form>
+                        <input type="text">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="maroon"><strong>MEAL</strong></td>
+                <td bgcolor="maroon"><form>
+                    <input type="radio" name="Doner" id="1" value = "Doner">
+                    <label for="1">Doner</label>
+                    <br>
+                    <input type="radio" name="Doner XXL" id="2" value = "Doner XXL">
+                    <label for="2">Doner XXL</label>
+                    <br>
+                    <input type="radio" name="Durum " id="3" value = "Durum">
+                    <label for="3">Durum</label>
+                    <br>
+                    <input type="radio" name="Durum XXL" id="4" value = "Durum XXL">
+                    <label for="4">Durum XXL</label>
+                    <br>
+                    <input type="radio" name="Chicken Wrap" id="5" value = "Chicken Wrap">
+                    <label for="5">Chicken Wrap</label>
+                    <br>
+                    <!--mnogu gi ima-->
+                </form>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor = "red"><strong>SAUCE</strong></td>
+                <td bgcolor = "red">
+                    <form>
+                      <select name="SAUCE" id="9">
+                        <option value = "highwaytohell">Highway to hell </option>
+                        <option value = "onlyspicy">Spicy</option>
+                        <option value = "salty">Salty</option>
+                        <option value = "sweet">Sweet</option>
+                        <option value = "Sweetandsalty">Sweet and salty</option>
+                        <option value = "sweetandspicy">Sweet and spicy</option>
+                        <option value = "saltyandspicy">Salty and spicy</option>
+                        <option value = "sour">Sour</option>
+                        <option value = "sourandsalty">Sour and salty</option>
+                        <option value = "sourandspicy">Sour and spicy</option>
+                        <option value = "sourandsweet">Sour and sweet</option>
+                    </select>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="lightblue"><strong>DRINKS</strong></td>
+                <td bgcolor="lightblue">
+                    <form>
+                        <select name="DRINKS" id="10">
+                            <option value = "cocacola">Coca Cola</option>
+                            <option value = "sprite">Sprite</option>
+                            <option value = "fanta">Fanta</option>
+                            <option value = "ajran">Ajran</option>
+                            <option value = "water">Water</option>
+                            <option value = "sourwater">Sour water</option>
+                        </select>
+                    </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="red"><strong>MEAL TYPE</strong></td>
+                        <td bgcolor="red">
+                            <form>
+                                <input type="checkbox" id ="11" Value = "Lmenu">
+                                <label for="11">L MENU</label>
+                                <br>
+                                <input type="checkbox" id ="12" Value = "Mmenu">
+                                <label for="12">M MENU</label>
+                                <br>
+                                <input type="checkbox" id ="13" Value = "Smenu">
+                                <label for="13">S MENU</label>
+                                <br>
+                                <input type="checkbox" id ="14" Value = "nada">
+                                <label for="14">WITHOUT MENU</label>
+                                <br>
+                            </form>
+                        </td>
+                    </tr>
+                <tr style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: large;font-weight: bold;margin: auto;border: 20px;border-radius: 20px;color: rgb(0, 0, 0);text-decoration:underline;text-shadow: 10px;background-color:maroon"> <!--2-->
+                    <td>DELIVERY AND INSTRUCTIONS</td>
+                    <td bgcolor="maroon">
+                    <textarea cols="30" rows="10"></textarea>
+                </td>
+                </tr>
+                <tr>
+                    <td bgcolor= "red" colspan="2">
+                        <form>
+                        <input type = "submit" id = "15" name = "FINISH" Value = "Submit order"> 
+                    </form>
+                </td>
+                </tr>
+        </tbody>
+    </table>
+    <p align = center><img src = "donerk.png" class = "background_image" />
+    </p>
+</body>
+</html>
