@@ -1,0 +1,40 @@
+
+ul {
+list-style:upper-roman;
+background: #ff0000;
+}
+ul li {
+display: inline-block;
+position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    color:rgb(211, 210, 210);
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+ul li ul.dropdown li {
+    display: block;
+}
+ul li ul.dropdown {
+    width: 100%;
+    background: #8c2222;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover {
+    background: #661111;
+    background-size: auto;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+header{
+    text-align: left;
+}
