@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>dpizza</title>
+    <link rel = "stylesheet", type="text/css"
+    href="ul.css">
+    <link rel="stylesheet",type="text/css"
+    href = "stilrec.css">
+</head>
+<body>
+    <header>        
+            <p><img src="logologo.png" class="foreground_image"/></p>
+            <ul>
+                <li><a href="#">DONER QUEEN ©</a></li>
+                <li onclick="location.href = 'proekt1.html'"><a href="#">Home</a></li>
+                <li>
+                    <a href="#">Countries ⮟</a>
+                <ul class = "dropdown">
+                    <li><a href="#">Macedonia</a></li>
+                    <li><a href="#">Turkey</a></li>
+                    <li><a href="#">Albania</a></li>
+                    <li><a href="#">Germany</a></li>
+                    <li><a href="#">United States of America</a></li>
+                </ul>
+                </li>
+                <li onclick="location.href = 'kontaktinfo.html'"><a href="#">Contact Us ✆</a></li>
+    </header>
+    <div id="container" class="list">
+        <div>
+            <input type="file" id="fileInput">
+            <button onclick="addPhoto()">Add Photo</button>
+          </div>
+          <div class="gallery" id="gallery"></div>          
+    <div class = text>
+        <h1 id = "headertext"> DONER PIZZA </h1>
+        <button onclick="location.href='order.html'">Order!</button>
+        <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+          </div>
+          <p id="averageRating">Average Rating: <span id="average">-</span></p>
+          <p id="totalRatings">Total Ratings: <span id="total">0</span></p>
+    </div>    
+    <div>
+        <textarea id="userComment" placeholder="Enter your comment here..."></textarea>
+        <button onclick="saveComment()">Add Comment</button>
+      </div>
+      <div class = "text_background">
+      <div id="commentSection">
+      </div>
+      </div>
+</div>
+    
+
+    <script src="ratecom.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>rate</title>
+    <link rel = "stylesheet", type="text/css"
+    href="ul.css">
+    <link rel="stylesheet",type="text/css"
+    href = "proektstil.css">
+
+</head>
+<body>
+    <header>
+        
+        <p><img src="logologo.png" class="foreground_image"/></p>
+        <ul>
+            <li><a href="#">DONER QUEEN ©</a></li>
+            <li onclick="location.href ='proekt1.html'"><a href="#">Home</a></li>
+            <li>
+                <a href="#">Countries ⮟</a>
+            <ul class = "dropdown">
+                <li><a href="#">Macedonia</a></li>
+                <li><a href="#">Turkey</a></li>
+                <li><a href="#">Albania</a></li>
+                <li><a href="#">Germany</a></li>
+                <li><a href="#">United States of America</a></li>
+            </ul>
+            </li>
+            <li onclick="location.href = 'kontaktinfo.html'"><a href="#">Contact Us ✆</a></li>
+        </header>
+    
+        <h1>Share Your Impressions</h1>
+        <form id="commentForm">
+          <label for="comment">Your Comments:</label><br>
+          <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      
+        <div id="commentsSection">
+          <h2>Comments:</h2>
+          <ul id="commentsList"></ul>
+        </div>
+      
+        
+
+    <footer>
+    <ul>
+        <li><a href="#"></a></li>
+    </ul>
+    </footer>
+    <script>
+      localStorage.clear(); //trgni
+        function saveComment(comment) {
+          let comments = localStorage.getItem('siteComments');
+          comments = comments ? JSON.parse(comments) : [];
+          comments.push(comment);
+          localStorage.setItem('siteComments', JSON.stringify(comments));
+        }
+    
+        function displayComments() {
+          let comments = localStorage.getItem('siteComments');
+          comments = comments ? JSON.parse(comments) : [];
+    
+          const commentsList = document.getElementById('commentsList');
+          commentsList.innerHTML = '';
+    
+          comments.forEach((comment) => {
+            const listItem = document.createElement('li');
+            const hr = document.createElement('hr');
+            listItem.textContent = comment;
+            commentsList.appendChild(listItem);
+            commentsList.appendChild(hr);      
+          });
+        }
+    
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // ne mozhe default da vnesesh
+    
+          const commentInput = document.getElementById('comment');
+          const comment = commentInput.value;
+    
+          if (comment.trim() !== '') {
+            saveComment(comment);
+            displayComments();
+            commentInput.value = ''; // brishi input otkako kje se dodade komentar
+          }
+        });
+    
+        window.addEventListener('load', displayComments);
+      </script>
+</body>
+</html>

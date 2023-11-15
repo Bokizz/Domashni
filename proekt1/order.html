@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>order</title>
+    <link rel = "stylesheet", type="text/css"
+    href="ul.css">
+    <style>
+        body{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-decoration: solid;
+margin: 50px;
+text-align: center;
+background-color: rgb(211, 210, 210);
+font-size: 20px;
+}
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+        background-color:whitesmoke;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: calc(100% - 18px);
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    </style>
+</head>
+<body>
+    <header>        
+            <p><img src="logologo.png" class="foreground_image"/></p>
+            <ul>
+                <li><a href="#"></a></li>
+            </ul>
+        </header>
+        <h2>Ordering...</h2>
+  <form id="orderForm" action="order_process.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <hr>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <hr>
+
+    <label for="phone">Phone number:</label>
+    <input type="tel" id="phone" name="phone" required>
+    <hr>
+
+    <label for="food">Select Food:</label>
+    <select id="food" name="food" required onchange="calculateTotal()">
+      <option value="">Select Food</option>
+      <option value="dpizza" data-price="10">Doner Pizza - $15</option>
+      <option value="capri" data-price="8">Capricioze - $10</option>
+      <option value="qforma" data-price="12">Quatro Formaggi - $12</option>
+      <option value="durum" data-price="6">Durum - $7</option>
+      <option value="doner" data-price="6">Doner - $6</option>
+      <option value="cesar" data-price="6">Cesar Salad- $10</option>
+      <option value="shopska" data-price="6">Shopska Salad - $6</option>
+      <option value="chs" data-price="6">Chicken Salad- $8</option>
+      <option value="greeks" data-price="6">Greek Salad - $3</option> <!--inflaacija -->
+    </select>
+    <hr>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" required onchange="calculateTotal()">
+    <hr>
+
+    <label for="additional_info">Additional Information:</label>
+    <textarea id="additional_info" name="additional_info" rows="4"></textarea>
+    <hr>
+
+    <input type="submit" value="Place Order">
+  </form>
+
+  <h3 id="totalCost">Total Cost: $0</h3>
+
+    <footer>
+        <ul>
+            <li><a href="#"></a></li>
+        </ul>
+        </footer>
+
+        <script>
+            function calculateTotal() { // cena total
+              const food = document.getElementById('food');
+              const quantity = document.getElementById('quantity');
+              const totalCost = document.getElementById('totalCost');
+        
+              const selectedFood = food.options[food.selectedIndex];
+              const price = parseFloat(selectedFood.getAttribute('data-price'));
+              const quantityValue = parseInt(quantity.value);
+        
+              const totalPrice = price * quantityValue;
+              totalCost.textContent = `Total Cost: $${totalPrice}`;
+            }
+            document.getElementById('refreshForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      location.reload();  //refreshiraj
+    });
+          </script>
+</body>
+</html>

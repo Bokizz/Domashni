@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Döner Queen</title>
+    <link rel = "stylesheet", type="text/css"
+    href="ul.css">
+    <link rel="stylesheet",type="text/css"
+    href = "proektstil.css">
+
+</head>
+<body>
+    <header>
+        
+        <p><img src="logologo.png" class="foreground_image"/></p>
+        <ul>
+            <li><a href="#">DONER QUEEN ©</a></li>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Countries ⮟</a>
+            <ul class = "dropdown">
+                <li><a href="#">Macedonia</a></li>
+                <li><a href="#">Turkey</a></li>
+                <li><a href="#">Albania</a></li>
+                <li><a href="#">Germany</a></li>
+                <li><a href="#">United States of America</a></li>
+            </ul>
+            </li>
+            <li onclick="location.href ='order.html'"><a href="#">Order NOW!</a></li>
+            <li onclick="location.href = 'kontaktinfo.html'"><a href="#">Contact Us ✆</a></li>
+            <li onclick="location.href = 'rate.html'"><a href="#">Rate Us</a></li>
+        </header>
+    
+    <form id="signInForm">
+        <h2>Sign In</h2>
+        <label for="user">Username:</label>
+        <input type="text" id="user" name="user" required>
+        <br>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="pass" required>
+        <br>
+        <button type="button" onclick="signIn()">Sign In</button>
+    </form>
+
+    <div id="listContainer" class="list">
+        <div class="list-item">
+            <img src="salata.jpg" alt="salata de">
+            <p style="font-size: larger;font-weight: bold;">Salads</p>
+                <p>We have a variety of salads such as</p>
+                <p style="font-size: large;font-weight: lighter;"><a href="cesar.html">Cesar Salad</a></p>
+                <p style="font-size: large;font-weight: lighter;"><a href="shopska.html">Shopska Salad</a></p>
+                <p style="font-size: large;font-weight: lighter;"><a href="vege.html">Vegetarian Salad</a></p>
+                <p style="font-size: large;font-weight: lighter;"><a href="chs.html">Chicken Salad</a></p>
+                <p style="font-size: large;font-weight: lighter;"><a href="greeks.html">Greek Salad</a></p>
+        </div>
+
+        <div class="list-item">
+            <img src = "donerq.jpg" alt = "doner de">
+            <p style="font-size: larger;font-weight: bold;">Kebab</p>
+                <p>The best doner kebab on Earth!</p>
+                <p style="font-size: large;font-weight: lighter;"><a href="donerr.html">Doner</a></p>
+                <p style="font-size: large;font-weight: lighter;"><a href="durumm.html">Durum</a></p>
+        </div>
+
+        <div class="list-item">
+            <img src="pizzaaa.jpg" alt="Image 3">
+            <p style="font-size: larger;font-weight: bold;">Kebab</p>
+            <p>And some pizzas</p>
+            <p style="font-size: large;font-weight: lighter;"><a href="capri.html">Capricioze</a></p>
+            <p style="font-size: large;font-weight: lighter;"><a href="qforma.html">Quatro Formaggi</a></p>
+            <p style="font-size: large;font-weight: lighter;"><a href="dpizza.html">DONER PIZZA!!!</a></p>
+        </div>
+
+    </div>
+
+    <footer>
+    <ul>
+        <li><a href="#"></a></li>
+    </ul>
+    </footer>
+    <script src="signin.js">
+    </script>
+</body>
+</html>
