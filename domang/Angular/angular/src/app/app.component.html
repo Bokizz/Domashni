@@ -1,0 +1,8 @@
+<app-driver 
+  *ngFor="let vzc of vozaci; index as i; first as prv; odd as par" 
+  [class.prv]="par" 
+  [vozac]="vzc" 
+  [reden]="i+1"
+  (cuci)="appKlik($event)">
+</app-driver>
+<!-- prv e true ili false vo zavisnost od toa dali e prv elementot od listata -->
