@@ -1,0 +1,24 @@
+.container {
+    padding: 0px 15% 100px 15%;
+    text-align: center;
+    background-color: rgba(129, 95, 0, 0.041);
+    border-bottom: thin solid #ff0000;
+  }
+  .img1 {
+    background-image: url("../../assets/images/cbe491f0-84c9-4460-a52f-ca73e0712eee.png");
+    background-size: cover;
+    height: 75vh;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .aboutUs {
+    position: absolute;
+    z-index: 15;
+    font-size: x-large;
+    font-weight:normal;
+    color: rgb(255, 0, 0);
+    font-family: inherit;
+    padding: 20% 10% 0px 10%;
+    margin: 0px 15% 200px 0px;
+    text-align: center;
+  }

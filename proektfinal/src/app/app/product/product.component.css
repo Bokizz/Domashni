@@ -1,0 +1,34 @@
+.product {
+    margin: 0px 20px 20px 20px;
+    padding: 10px;
+    border: thick solid #3c38722a;
+    text-align: center;
+    height: 50vh;
+    width: 25vh;
+  }
+  
+  img {
+    height: 85%;
+    width: 100%;
+    border-radius: 5%;
+    object-fit: cover;
+  }
+  
+  .product:hover {
+    background-color: #ff000052;
+  }
+  
+  .description {
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .p {
+    color: #000000;
+    font-family: inherit;
+    font-weight: bolder;
+  }

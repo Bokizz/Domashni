@@ -1,0 +1,27 @@
+.body {
+    height: 84%;
+    background-color: rgba(129, 95, 0, 0.041);
+    border-bottom: thin solid #ff0000;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0% 0px 2%;
+    border: thin solid rgba(255, 255, 255, 0.445);
+    margin-bottom: 250px;
+  }
+  .info {
+    border: thin solid #ff0000;
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+  }
+  .img {
+    margin: 0px 20px 20px 20px;
+  }
+  img {
+    height: 450px;
+    width: 300px;
+  }

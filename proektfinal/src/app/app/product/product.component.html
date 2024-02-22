@@ -1,0 +1,14 @@
+<ng-template #noImg>
+    <p>The picture can not be shown</p>
+  </ng-template>
+  <div class="product">
+    <img id="pic" [src]="product.picUrl1">
+    <div class="description">
+      <div class="p">
+        {{ product.name }}
+      </div>
+      <div class="p">
+        {{   product.price + ' den' }}
+      </div>
+    </div>
+  </div>
